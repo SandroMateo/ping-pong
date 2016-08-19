@@ -4,11 +4,11 @@ function pingPong(input) {
     if(i % 5 === 0 && i % 3 === 0) {
       pongArray.push("ping-pong!");
     }
-    else if(i % 5 === 0) {
-      pongArray.push("pong!");
-    }
     else if(i % 3 === 0) {
       pongArray.push("ping!")
+    }
+    else if(i % 5 === 0) {
+      pongArray.push("pong!");
     }
     else {
       pongArray.push(i);
@@ -20,7 +20,9 @@ $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     var inputNumber = parseInt($("#input-number").val());
-    var output = pingPong(inputNumber);
-    $("#output").text(output);
+    var outputArray = pingPong(inputNumber);
+    outputArray.forEach(function(output) {
+      $("#output").append("<li>" + output + "</li>");
+    });
   });
 });
