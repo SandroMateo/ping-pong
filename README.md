@@ -6,7 +6,7 @@
 
 ## Description
 
-This webpage count up to a user input number, replacing multiples of 3 with ping, multiples of 5 wiht pong, and multiples of both 3 and 5 with ping-pong.
+This webpage counts up to a user input number, replacing multiples of 3 with ping, multiples of 5 with pong, and multiples of both 3 and 5 with ping-pong.
 
 ## Specifications
 
@@ -21,7 +21,7 @@ replacing multiples of both 3 and 5 with ping-pong | 15 | 1,2,ping,4,pong,...,13
 
 * Clone this repository
 * Open index.html in your web browser
-* Heres is the link:  https://sandromateo.github.io/ping-pong/
+* Here's is the link:  https://sandromateo.github.io/ping-pong/
 
 ## Technologies Used
 
@@ -37,6 +37,6 @@ If you run into any problems, contact me at sandroalvarez@yahoo.com
 
 ### Legal
 
-Copyright (c) 2016 Sandro Alvarez
+Copyright (c) 2016 Sandro Alvarez.
 
 Licensed under the MIT license
