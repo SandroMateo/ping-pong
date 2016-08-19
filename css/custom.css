@@ -1,6 +1,6 @@
 .jumbotron {
   text-align: center;
-  color: white;
+  color: gold;
   background-image: url(../img/table.jpg);
 }
 #output {
@@ -63,6 +63,27 @@
   font-size: 1000%;
   text-decoration: underline;
   text-shadow: 5px 5px black;
+}
+
+#try-again {
+  color: white;
+  text-align: center;
+  display: none;
+}
+
+#again {
+  width: 200px;
+  margin-left: 40%;
+}
+
+#again:hover {
+  cursor: pointer;
+  color: crimson;
+  text-decoration: underline;
+}
+
+.tryAgain {
+  background-color: black;
 }
 
 .btn-default {

@@ -39,19 +39,21 @@ $(function() {
           $("#output").text(array[counter] + "!");
         }
         counter++;
-        if (counter < array.length) {
+        if (counter <= array.length) {
           myLoop(array,counter);
+        }
+        else {
+          $("body").attr("class", "tryAgain");
+          $("#output").hide().text("");
+          $("#try-again").fadeIn();
         }
       }, 1000)
     }
-    $(".btn-default").fadeIn(outputArray.length*1000);
   });
-  $(".btn-default").click(function(event) {
-    event.preventDefault();
-    $("input[type=number], numberarea").val("")
+  $("#again").click(function() {
     $("body").removeClass();
-    $("#output").hide().text("");
-    $(".btn-default").fadeOut();
+    $("input[type=number], numberarea").val("")
+    $("#try-again").fadeOut();
     $("#setup").slideDown();
   });
 });
