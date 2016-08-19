@@ -3,22 +3,22 @@
   margin-top: 25%
 }
 
-.background1 {
+.background0 {
   background-color: red;
 }
 
-.background2 {
+.background1 {
   background-color: blue;
 }
 
-.backgroundPing {
+.backgroundping {
   background-image: url(../img/ping.png);
 }
 
-.backgroundPong {
+.backgroundpong {
   background-image: url(../img/pong.jpeg);
 }
 
-.backgroundPingPong {
+.backgroundping-pong {
   background-image: url(../img/ping-pong.gif);
 }
