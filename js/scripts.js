@@ -16,34 +16,50 @@ function pingPong(input) {
   }
   return pongArray;
 }
+// function myLoop (array, counter) {
+//   setTimeout(function() {
+//     return(array[counter]);
+//     counter++;
+//     if (counter < array.length) {
+//       myLoop(array,counter);
+//     }
+//   }, 2000)
+// }
 $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     $("#setup").slideUp();
     var inputNumber = parseInt($("#input-number").val());
     var outputArray = pingPong(inputNumber);
-    alert(outputArray);
-    for(var j = 0; j < outputArray.length; j++) {
-      if (outputArray[j] % 2 === 1) {
-        $("body").toggleClass("background1");
-        $("#output").text(outputArray[j]);
-      }
-      else if (outputArray[j] % 2 === 0) {
-        $("body").toggleClass("background2");
-        $("#output").text(outputArray[j])
-      }
-      else if (outputArray[j] === "ping!") {
-        $("body").toggleClass("backgroundPing");
-        $("#output").text(outputArray[j]);
-      }
-      else if (outputArray[j] === "pong!") {
-        $("body").toggleClass("backgroundPong");
-        $("#output").text(outputArray[j]);
-      }
-      else if (outputArray[j] === "ping-pong!") {
-        $("body").toggleClass("backgroundPingPong");
-        $("#output").text(outputArray[j]);
-      }
+    var count = 0;
+    myLoop(outputArray,count);
+    function myLoop (array, counter) {
+      setTimeout(function() {
+        if(array[counter] % 2 === 1) {
+          $("body").toggleClass("background1");
+          $("#output").text(array[counter]);
+        }
+        else if (array[counter] % 2 === 0) {
+          $("body").toggleClass("background2");
+          $("#output").text(array[counter]);
+        }
+        else if (array[counter] === "ping!") {
+          $("body").toggleClass("backgroundPing");
+          $("#output").text(array[counter]);
+        }
+        else if (array[counter] === "pong!") {
+          $("body").toggleClass("backgroundPong");
+          $("#output").text(array[counter]);
+        }
+        else if (array[counter] === "ping-pong!") {
+          $("body").toggleClass("backgroundPingPong");
+          $("#output").text(array[counter]);
+        }
+        counter++;
+        if (counter < array.length) {
+          myLoop(array,counter);
+        }
+      }, 1000)
     }
   });
 });
