@@ -21,6 +21,7 @@ $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     $("#setup").slideUp();
+    $("#output").show();
     var inputNumber = parseInt($("#input-number").val());
     var outputArray = pingPong(inputNumber);
     var count = 0;
@@ -43,13 +44,14 @@ $(function() {
         }
       }, 1000)
     }
-    // $(".btn-default").fadeIn(outputArray.length*3000);
+    $(".btn-default").fadeIn(outputArray.length*1000);
   });
-  // $(".btn-default").click(function(event) {
-  //   event.preventDefault();
-  //   $("body").removeClass();
-  //   $("#output").fadeOut();
-  //   $(".btn-default").fadeOut();
-  //   $("#setup").slideDown();
-  // });
+  $(".btn-default").click(function(event) {
+    event.preventDefault();
+    $("input[type=number], numberarea").val("")
+    $("body").removeClass();
+    $("#output").hide().text("");
+    $(".btn-default").fadeOut();
+    $("#setup").slideDown();
+  });
 });

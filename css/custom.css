@@ -65,8 +65,8 @@
   text-shadow: 5px 5px black;
 }
 
-/*.btn-default {
+.btn-default {
   display: none;
-  margin-left: 100%;
-  margin-top: 25%;
-}*/
+  margin-left: 75em;
+  margin-top: 25em;
+}
