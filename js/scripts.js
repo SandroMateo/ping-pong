@@ -29,37 +29,27 @@ $(function() {
       setTimeout(function() {
         if(array[counter] % 2 === 0 || array[counter] % 2 === 1) {
           $("body").attr("class", "background" + array[counter] % 2);
+          $("#output").attr("class", "text" + array[counter] % 2);
           $("#output").text(array[counter]);
         }
         else {
           $("body").attr("class", "background" + array[counter]);
+          $("#output").attr("class", "text" + array[counter]);
           $("#output").text(array[counter] + "!");
         }
-        // if(array[counter] % 2 === 1) {
-        //   $("body").toggleClass("background1");
-        //   $("#output").text(array[counter]);
-        // }
-        // else if (array[counter] % 2 === 0) {
-        //   $("body").toggleClass("background2");
-        //   $("#output").text(array[counter]);
-        // }
-        // else if (array[counter] === "ping!") {
-        //   $("body").toggleClass("backgroundPing");
-        //   $("#output").text(array[counter]);
-        // }
-        // else if (array[counter] === "pong!") {
-        //   $("body").toggleClass("backgroundPong");
-        //   $("#output").text(array[counter]);
-        // }
-        // else if (array[counter] === "ping-pong!") {
-        //   $("body").toggleClass("backgroundPingPong");
-        //   $("#output").text(array[counter]);
-        // }
         counter++;
         if (counter < array.length) {
           myLoop(array,counter);
         }
       }, 1000)
     }
+    // $(".btn-default").fadeIn(outputArray.length*3000);
   });
+  // $(".btn-default").click(function(event) {
+  //   event.preventDefault();
+  //   $("body").removeClass();
+  //   $("#output").fadeOut();
+  //   $(".btn-default").fadeOut();
+  //   $("#setup").slideDown();
+  // });
 });

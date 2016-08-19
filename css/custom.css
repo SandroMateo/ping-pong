@@ -1,24 +1,72 @@
+.jumbotron {
+  text-align: center;
+  color: white;
+  background-image: url(../img/table.jpg);
+}
 #output {
   text-align: center;
-  margin-top: 25%
 }
 
 .background0 {
-  background-color: red;
+  background-color: crimson;
+}
+
+.text0 {
+  margin-top: 8em;
+  color: dodgerblue;
 }
 
 .background1 {
-  background-color: blue;
+  background-color: dodgerblue;
+}
+
+.text1 {
+  margin-top: 8em;
+  color: crimson;
 }
 
 .backgroundping {
   background-image: url(../img/ping.png);
 }
 
+.textping {
+  margin-top: 4em;
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 500%;
+  margin-right: 60%;
+}
+
 .backgroundpong {
   background-image: url(../img/pong.jpeg);
+}
+
+.textpong {
+  margin-top: 4em;
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 500%;
+  margin-left: 60%;
 }
 
 .backgroundping-pong {
   background-image: url(../img/ping-pong.gif);
 }
+
+.textping-pong {
+  margin-top: 2em;
+  color: yellow;
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 1000%;
+  text-decoration: underline;
+  text-shadow: 5px 5px black;
+}
+
+/*.btn-default {
+  display: none;
+  margin-left: 100%;
+  margin-top: 25%;
+}*/
