@@ -19,10 +19,31 @@ function pingPong(input) {
 $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
+    $("#setup").slideUp();
     var inputNumber = parseInt($("#input-number").val());
     var outputArray = pingPong(inputNumber);
-    outputArray.forEach(function(output) {
-      $("#output").append("<li>" + output + "</li>");
-    });
+    alert(outputArray);
+    for(var j = 0; j < outputArray.length; j++) {
+      if (outputArray[j] % 2 === 1) {
+        $("body").toggleClass("background1");
+        $("#output").text(outputArray[j]);
+      }
+      else if (outputArray[j] % 2 === 0) {
+        $("body").toggleClass("background2");
+        $("#output").text(outputArray[j])
+      }
+      else if (outputArray[j] === "ping!") {
+        $("body").toggleClass("backgroundPing");
+        $("#output").text(outputArray[j]);
+      }
+      else if (outputArray[j] === "pong!") {
+        $("body").toggleClass("backgroundPong");
+        $("#output").text(outputArray[j]);
+      }
+      else if (outputArray[j] === "ping-pong!") {
+        $("body").toggleClass("backgroundPingPong");
+        $("#output").text(outputArray[j]);
+      }
+    }
   });
 });

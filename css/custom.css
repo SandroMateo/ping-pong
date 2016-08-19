@@ -1,0 +1,24 @@
+#output {
+  text-align: center;
+  margin-top: 25%
+}
+
+.background1 {
+  background-color: red;
+}
+
+.background2 {
+  background-color: blue;
+}
+
+.backgroundPing {
+  background-image: url(../img/ping.png);
+}
+
+.backgroundPong {
+  background-image: url(../img/pong.jpeg);
+}
+
+.backgroundPingPong {
+  background-image: url(../img/ping-pong.gif);
+}
